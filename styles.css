@@ -1,1 +1,41 @@
 /*  your css code here. If applicable */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    height: 100vh;
+  }
+
+  .item {
+    background-color: green;
+    color: white;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* First element spans all 4 columns */
+  .item1 {
+    grid-column: 1 / 5;
+  }
+
+  /* Second element spans 4 rows */
+  .item2 {
+    grid-row: 2 / span 4;
+  }
+
+  /* Fourth and fifth elements span 2 columns each */
+  .item4 {
+    grid-column: span 2;
+  }
+
+  .item5 {
+    grid-column: span 2;
+  }
+
+  /* Tenth element spans 3 columns */
+  .item10 {
+    grid-column: span 3;
+  }
